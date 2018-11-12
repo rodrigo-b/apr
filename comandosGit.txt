@@ -1,0 +1,74 @@
+
+###################################REPOSITÓRIO LOCAL###################################
+git log -n 2 --oneline (mostrar log resumido e os dois ultimos)
+git log --parents(mostra commits associados aos seus pais)
+
+git checkout --arquivo (desfaz alterações no working directory)
+git reset --arquivo (desfaz alterações na area de stage)
+git reset --hard --commit ( desfaz alterações ja commitadas, dessa forma apaga historico, não recomendada)
+git revert --numeroDoCommit desfaz alterações commitadas
+git revert --no-edit numeroDoCommit(Desfaz alterações commitadas sem precisar por mensagem de commit)
+
+
+git commit -am 'mensagemDeCommit' ja adiciona a stage e commita
+
+git mv nomeArquivo novoNomeDeArquivo (Renomeia arquivo)
+git mv nomeArquivo caminhoDapasta/NomeArquivo (move arquivo de masta)
+
+git rm nomeArquivo para deletar
+
+git diff numeroDoCommit (compara alterações do commit numerado com o atual)
+git diff numeroDoCommit..numeroDoCommit (compara alterações entre dois commits)
+
+###################################REPOSITÓRIO REMOTO###################################
+git init --bare moveis-ecologicos.git(Cria um novo repositorio remoto na maquina(servidor))
+git remote add servidor file://192.168.0.107/C:/Users/Rodrigo/Desktop/moveis/moveis-ecologicos.git/ (add servidor remoto)
+git remote (listar servidores remotos)
+git remote -v(lista servidores remotos com o ip deles)
+git remote rename servidor outronome (renomear nome do servidor)
+file://192.168.0.107/C:/Users/Rodrigo/Desktop/moveis/moveis-ecologicos.git/(Alterar caminho de url do servidor)
+
+###################################BRANCHS###################################
+git log --oneline--decorate --parents mostrar resumido todos os outros commits
+git branch e o nome da branch para cria-la
+git checkout (nomeDaBranch) para criar uma
+git checkout -b (nomeDaBranch) ja cria e troca de branch
+git branch -v(lista branchs  com os commits associados a ela)
+git branch design(Cria uma branch chamada design)
+git branch -d para remover uma branch
+git branch --no-merged mostra branchs sem merges realizados
+git branch merge(nomeDaBranch) -m 'Mesclando branchs'
+git merge --no-ff( força um commit de um merge fast-foward)
+git config --global merge.tool meld
+git checkout design(Troca para branch design)
+git checkout -b nome da nova branch(cria nova branch e aponta repositorio para ela)
+git rebase (nome da branch) substitui dados de uma por outra
+git mergetool --tool-help
+
+###################################BRANCHS REMOTAS#####################################
+git branch -r MOSTRAR TODAS AS BRANCHS REMOTAS
+git branch -a MOSTRAR TODAS AS BRANCHS LOCAIS E REMOTAS)
+git branch -r -v MOSTRA PARA QUAIS COMMITS AS BRANCHS REMOTAS ESTÃO APONTANDO
+git checkout -b (novaBranch) origin/(branchRemota_), cria Branch local a partir da remota
+git checkout -t  origin/(branchRemota_), cria Branch local a partir da remota
+git fecth origin (traz mudanças da branch remota)
+git merge origin/master -m '' Mesclar branch remota e local
+git pull --rebase
+git push origin :(NomeDaBranch) (deletar branchs remotas)
+
+git checkout -- index.html. é uma boa pratica o -- representa que é um arquivo
+
+
+##################################TAGS######################################
+git tag v1.0 (Cria um ponteiro fixo - Tag)
+git tag ( listar Tags)
+git tag -d nomeDaTag(PAra deletar tags)
+
+
+##################################RESOLVENDO CONFLITOS###########################
+git rebase --continue(pARA FINALIZAR CONFLITO DE REBASE )
+git rebase --abort (Para abortar o rebase)
+git mergetool ( Ferramenta de resolução de arquivos)
+
+################################IGNORAR ARQUIVOS#######################
+touch .gitignore

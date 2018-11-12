@@ -1,0 +1,10 @@
+Há uma situação em que um git merge não irá gerar um commit
+de merge: quando a branch de destino não teve nenhum commit a mais
+desde que a branch a ser mesclada foi criada.
+No nosso caso, se não tivéssemos feito o commit 2223859 (Alterando
+textos do banner) na branch master, o merge com a branch
+design seria basicamente apontar a master para onde a design
+aponta: o commit 8f53065 (Adicionando Bootstrap).
+Esse tipo de merge é chamado de fast-forward.
+É possível evitar o uso de fast-forward, forçando a criação deumcommit
+de merge, utilizando a opção --no-ff do comando git merge.

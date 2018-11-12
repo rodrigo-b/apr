@@ -1,0 +1,20 @@
+﻿==============================Roteiro=============================
+
+- Começar com a diferença entre git e gitLab
+- Falar dos três estados do git:
+	*Criar pasta chamada projeto apresentação;
+	*Usar o git bash para demostrar os 3 estados do git;
+	*Fazer uma alteração(Criar o campo telefone) e realizar commit;
+	*Falar sobre rastreamento de arquivos;
+	*Mostrar o git diff;
+- Desfazendo alterações
+	*Alterar um em campo formulario e reverter a alteração nos 3 estados;
+	*Começar pelo stage;
+	* git reset, git checkout,git revert;
+	* git rm para deletar um arquivo;
+-Brachs Locais
+	*Falar o que é uma branch e diferença entre git e os sistemas antigos para 
+	 versionamento.
+	* Criar nova branch e fazer alterações nelas
+	* Criar Merge e rebase
+	
